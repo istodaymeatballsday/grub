@@ -1,7 +1,7 @@
 package main
 
-// ExpressResponse is the type of the response from the express api
-type ExpressResponse []struct {
+// Response is the type of the response from the express api
+type Response []struct {
 	ID                  string `json:"id"`
 	StartDate           string `json:"startDate"`
 	EndDate             string `json:"endDate"`

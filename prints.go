@@ -29,7 +29,7 @@ func PrintColor(color string, s string) {
 }
 
 // PrintFood is a wrapper for printColor for the food
-func PrintFood(food *ExpressResponse) {
+func PrintFood(food *Response) {
 	printFood((*(food))[meat].DisplayNames[swedish].DishDisplayName)
 	printFood((*(food))[vegan].DisplayNames[swedish].DishDisplayName)
 }
