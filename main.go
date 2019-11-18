@@ -49,8 +49,8 @@ func getFood(arg int) {
 	for i, r := range restaurants {
 		PrintColor(Green, r.DisplayName)
 		for _, res := range restaurantResponses[i] {
-			swedishFirst := r.DisplayName == linsen
-			PrintFood(res, swedishFirst)
+			englishFirst := r.DisplayName == linsen
+			PrintFood(res, englishFirst)
 		}
 	}
 }

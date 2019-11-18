@@ -10,11 +10,6 @@ const (
 )
 
 const (
-	swedish = iota
-	english = iota
-)
-
-const (
 	// Green color
 	Green = "\033[32m"
 	// Red color
@@ -29,13 +24,12 @@ func PrintColor(color string, s string) {
 }
 
 // PrintFood is a wrapper for printColor for the food
-func PrintFood(food *Response, swedishFirst bool) {
+func PrintFood(food *Response, englishFirst bool) {
 	for _, f := range *(food) {
-		if swedishFirst {
-			printFood(f.DisplayNames[0].DishDisplayName)
-		} else {
+		if englishFirst {
 			printFood(f.DisplayNames[1].DishDisplayName)
-
+		} else {
+			printFood(f.DisplayNames[0].DishDisplayName)
 		}
 	}
 }
